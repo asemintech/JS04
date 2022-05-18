@@ -58,8 +58,8 @@ class Calculator {
     constructor(firstValue, secondValue) {
         const checkValues = !Number.isInteger(firstValue)
                         || !Number.isInteger(secondValue);
-
-        if (checkValues || arguments.length > 2) {
+        
+        if (checkValues || arguments.length !== 2) {
             throw new Error ('Incorrect');
         } else {
             this.firstValue = firstValue;
